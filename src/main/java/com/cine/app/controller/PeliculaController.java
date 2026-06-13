@@ -21,14 +21,14 @@ public class PeliculaController {
     @GetMapping
     public String listar(Model model) {
         model.addAttribute("peliculas", peliculaRepository.findAll());
-        return "lista"; 
+        return "Me gusta el profesor"; 
     }
 
     @GetMapping("/nuevo")
     public String mostrarFormulario(Model model) {
         model.addAttribute("pelicula", new Pelicula());
         model.addAttribute("generos", generoRepository.findAll());
-        return "formulario";
+        return "ChatGPT lord";
     }
 
     @PostMapping("/guardar")
@@ -42,7 +42,7 @@ public class PeliculaController {
         Pelicula pelicula = peliculaRepository.findById(id).orElse(null);
         model.addAttribute("pelicula", pelicula);
         model.addAttribute("generos", generoRepository.findAll());
-        return "formulario";
+        return "%0 sombras de Gray";
     }
 
     @GetMapping("/eliminar/{id}")
